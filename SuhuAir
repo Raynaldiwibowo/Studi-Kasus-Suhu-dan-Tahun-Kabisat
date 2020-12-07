@@ -1,0 +1,29 @@
+package studi.kasus.suhu;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Raynaldi
+ */
+public class SuhuAir {
+    public static void main(String[]args){
+      //contoh pengguna if tika kasus wujud air
+      
+       int T;
+      //kamus 
+        System.out.println("contoh if tiga kasus");
+        System.out.print("Suhu (Der.C)= ");
+      //scanner untuk memasukan suhu air
+        Scanner scanner = new Scanner (System.in);
+        T = scanner.nextInt();//memasukan data air dengan tipe data int
+        
+      //Proses pengecekan dengan if 
+        if (T < 0){
+            System.out.println("Wujud air beku" + T);}
+        else if ((0 <= T) && (T <= 100)){
+            System.out.println("Wujud air cair" + T);}
+        else if(T >100){
+            System.out.println("Wujud air uap/gas" + T);}
+        }    
+    }
