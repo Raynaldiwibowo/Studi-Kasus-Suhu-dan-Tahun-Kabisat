@@ -1,0 +1,38 @@
+package kabisat;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Raynaldi
+ */
+public class Kabisat {
+    public static void main(String[]args){
+        String a = "Tahun Kabisat";
+        String b = "Bukan Tahun Kabisat";
+        int tahun;
+  
+        Scanner input=new Scanner(System.in);
+        //penginputan tahun dibatasi dari 2003 sampai 2030
+        System.out.println("======================");
+        System.out.println("Tahun Kabisat");
+        System.out.println("======================");
+        System.out.print("Silahkan masukan tahun (2003)-(2030) ;");
+        
+        
+        tahun=input.nextInt();
+        if (tahun<2003){
+            System.out.println("Maaf, Tahun Input Dibawah 2003");}
+        else if (tahun>2030){
+            System.out.println("Maaf, Tahun Input Diatas 2030");}
+        else if (tahun%4==0){
+            System.out.println("Tahun " + tahun + " Adalah " + a);}
+        else if (tahun%400!=0 || tahun%100==00){
+            System.out.println("Tahun " + tahun + " " + b);}
+        else if(tahun%400!=0 || tahun%100!=00 || tahun%4==0){
+            System.out.println("Tahun " + tahun + " Adalah " + a);}
+        else{
+            System.out.println("Tahun " + tahun + " " + b);
+        }       
+    }
+}
